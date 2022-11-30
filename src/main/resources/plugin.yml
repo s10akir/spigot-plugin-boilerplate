@@ -1,3 +1,4 @@
 name: spigot-plugin-boilerplate
 version: 1.0-SNAPSHOT
 main: cloud.mojamoja.spigot_plugin_boilerplate.SpigotPluginBoilerplate
+api-version: 1.19
