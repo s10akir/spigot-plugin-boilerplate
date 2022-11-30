@@ -1,4 +1,4 @@
-version: '2'
+version: "3.7"
 services:
   spigot:
     build: ./
@@ -7,3 +7,18 @@ services:
       - 25575:25575
     volumes:
       - ./data:/data
+
+  rcon-cli:
+    image: itzg/rcon-cli
+    profiles:
+      - cli
+    command: rcon-cli --host spigot --port 25575 --password rcon
+
+  gradle:
+    image: gradle
+    profiles:
+      - build
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    command: gradle build copyPlugin
