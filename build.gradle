@@ -5,6 +5,10 @@ plugins {
 group 'cloud.mojamoja'
 version '1.0-SNAPSHOT'
 
+jar {
+    baseName 'spigot-plugin-boilerplate'
+}
+
 repositories {
     mavenCentral()
     maven {
